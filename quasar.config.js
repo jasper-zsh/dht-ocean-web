@@ -32,6 +32,10 @@ module.exports = configure(function (/* ctx */) {
     boot: [
       'i18n',
       'axios',
+      {
+        client: false,
+        path: 'grpc',
+      },
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -152,7 +156,7 @@ module.exports = configure(function (/* ctx */) {
 
       middlewares: [
         'render' // keep this as last one
-      ]
+      ],
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
